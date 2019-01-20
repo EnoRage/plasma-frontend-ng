@@ -1,0 +1,59 @@
+<!--<div>-->
+  <!--<h3>Common information</h3>-->
+  <!--<br>-->
+  <!--<h4>Contract Address: {{cI.contractAddress}}</h4>-->
+  <!--<h4>Contract Balance: {{cI.contractBalance}}</h4>-->
+  <!--<h4>Verifier Plasma Balance: {{cI.verifierPlasmaBalance}}</h4>-->
+  <!--<h4>Verifier Ether Balance: {{cI.verifierEtherBalance}}</h4>-->
+  <!--<h4>Latest Block: {{cI.latestBlock}}</h4>-->
+  <!--<table>-->
+    <!--<tr>-->
+      <!--<th>Block Number</th>-->
+      <!--<th>Tx Number</th>-->
+      <!--<th>Output Number</th>-->
+      <!--<th>Output</th>-->
+    <!--</tr>-->
+    <!--<tr *ngFor="let c of cI.verifierInputs">-->
+      <!--<td>-->
+        <!--{{c.blockNumber}}-->
+      <!--</td>-->
+      <!--<td>-->
+        <!--{{c.txNumber}}-->
+      <!--</td>-->
+      <!--<td>-->
+        <!--{{c.outputNumber}}-->
+      <!--</td>-->
+      <!--<td>-->
+        <!--<label>-->
+          <!--Owner: {{c.output.owner}}-->
+        <!--</label>-->
+        <!--<label>-->
+          <!--Begin: {{c.output.slice.begin}}-->
+        <!--</label>-->
+        <!--<label>-->
+          <!--End: {{c.output.slice.end}}-->
+        <!--</label>-->
+      <!--</td>-->
+    <!--</tr>-->
+  <!--</table>-->
+<!--</div>-->
+<mat-card class="common-card" layout="row" layout-align="center center">
+  <mat-card-subtitle>
+    <h2>Plasma Service Details</h2>
+  </mat-card-subtitle>
+  <mat-card-subtitle style="margin-top: 30px">
+    Smart Contract: {{cI.contractAddress}}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    Operator host:
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    Latest Block: {{cI.latestBlock}}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    Contract Balance: {{cI.contractBalance}}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    Full history size:
+  </mat-card-subtitle>
+</mat-card>

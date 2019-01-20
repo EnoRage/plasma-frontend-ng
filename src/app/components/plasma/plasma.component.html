@@ -1,0 +1,25 @@
+<mat-card class="transfer-card" layout="row" layout-align="center center">
+  <mat-card-subtitle>
+    <h2>Plasma Client</h2>
+  </mat-card-subtitle>
+  <mat-card-subtitle style="margin-top: 30px">
+    Account: {{cI.contractAddress}}
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    Plasma balance: {{cI.verifierPlasmaBalance}} PETH
+  </mat-card-subtitle>
+  <mat-card-content>
+    <button  mat-raised-button routerLink="/transfer" color="primary"> Transfer</button>
+    <button  mat-raised-button color="primary" class="plasma-nav-button"> Start exit</button>
+    <button  mat-raised-button class="plasma-nav-button"> Try to cheat</button>
+    <!--<form class="transfer-form">-->
+      <!--<mat-form-field class="transfer-card-field">-->
+        <!--<input matInput placeholder="Amount" class="sum-input" [(ngModel)]="tx.sum" name="sum" required>-->
+      <!--</mat-form-field>-->
+      <!--<mat-form-field class="transfer-card-field" id="second-transfer-card-field">-->
+        <!--<input matInput placeholder="Transfer to" class="who-input" [(ngModel)]="tx.who" name="who" required>-->
+      <!--</mat-form-field>-->
+      <!--<button mat-raised-button color="primary" class="transfer-button" (click)="transfer()">Transfer</button>-->
+    <!--</form>-->
+  </mat-card-content>
+</mat-card>

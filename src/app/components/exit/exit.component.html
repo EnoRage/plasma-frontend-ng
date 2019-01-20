@@ -1,0 +1,10 @@
+<mat-card class="exit-card" layout="row" layout-align="center center">
+  <mat-card-content>
+    <form class="exit-form">
+      <mat-form-field class="exit-card-field">
+        <input matInput placeholder="Sum in wei" class="sum-input" [(ngModel)]="sum" name="sum" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="exit-button" (click)="exit()">Exit</button>
+    </form>
+  </mat-card-content>
+</mat-card>

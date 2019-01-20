@@ -1,0 +1,11 @@
+/*.deposit-card {*/
+  /*max-width: 50vh;*/
+/*}*/
+
+.dashboard-card-field, .sum-input, .deposit-button {
+  -moz-box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+}
+.deposit-button {
+  margin-left: 4px;
+}

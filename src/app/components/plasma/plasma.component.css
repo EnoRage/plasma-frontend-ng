@@ -1,0 +1,18 @@
+/*.plasma-card {*/
+  /*max-width:70vh;*/
+/*}*/
+
+#second-transfer-card-field {
+  min-width:40vh;
+}
+
+.transfer-card-field, .sum-input, .transfer-button {
+  -moz-box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+}
+.transfer-button, #second-transfer-card-field {
+  margin-left: 4px !important;
+}
+.plasma-nav-button {
+  margin-left: 4px;
+}

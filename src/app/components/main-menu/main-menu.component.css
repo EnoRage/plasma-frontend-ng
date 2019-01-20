@@ -1,0 +1,28 @@
+
+.wrapper {
+  margin: 2vh;
+  padding: 2vh;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: [col] 450px [col] 300px [col] auto  [col] auto;
+  grid-template-rows: [row] auto [row] auto [row] ;
+}
+
+.a {
+  grid-column: col / span 2;
+  grid-row: row 2;
+}
+.b {
+  grid-column:  col 3  / span 2 ;
+  grid-row: row 2;
+}
+
+.d {
+  grid-column: col / span 4;
+  grid-row: row 3;
+}
+
+.e {
+  grid-column: col / span 4;
+  grid-row: row 1;
+}
