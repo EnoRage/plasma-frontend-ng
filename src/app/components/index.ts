@@ -5,3 +5,4 @@ export {DashboardComponent} from './dashboard/dashboard.component';
 export {TransferHistoryComponent} from './transfer-history/transfer-history.component';
 export {ExitComponent} from './exit/exit.component';
 export {PlasmaComponent} from './plasma/plasma.component';
+export {DepositHistoryComponent} from './deposit-history/deposit-history.component';

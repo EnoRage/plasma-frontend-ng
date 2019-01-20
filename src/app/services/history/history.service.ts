@@ -8,8 +8,10 @@ import {HttpClient} from '@angular/common/http';
 export class HistoryService {
 
   private h: History[] = [];
+  private oldLen: number;
 
   constructor(private http: HttpClient) {
+    this.oldLen = 0;
     this.requestInfo();
     this.updateInfo();
   }
@@ -17,15 +19,15 @@ export class HistoryService {
   async updateInfo() {
     setInterval(() => {
       this.requestInfo();
-    }, 3000);
+    }, 2000);
   }
 
   requestInfo() {
-    this.h = [];
     this.http.get('http://localhost:8080/history').subscribe((data: any) => {
-      for (let i = 0; i < data.Events.length; i++) {
+      for (let i = this.oldLen; i < data.Events.length; i++) {
         this.h.push(data.Events[i]);
       }
+      this.oldLen = data.Events.length;
     });
   }
 

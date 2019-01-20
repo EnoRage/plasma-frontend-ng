@@ -10,6 +10,7 @@ import {
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CommonInfoComponent} from './components/';
 import {DepositComponent} from './components/';
+import {DepositHistoryComponent} from './components/';
 import {PlasmaComponent} from './components';
 import {ExitComponent} from './components';
 import {TransferHistoryComponent} from './components';
@@ -29,7 +30,8 @@ import {AppRoutingModule} from './app-routing.module';
     TransferHistoryComponent,
     DashboardComponent,
     TransferComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    DepositHistoryComponent
   ],
   imports: [
     BrowserModule,

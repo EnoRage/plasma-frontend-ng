@@ -15,4 +15,10 @@
       <button mat-raised-button color="primary" class="deposit-button" (click)="deposit()">Deposit to plasma</button>
     </form>
   </mat-card-content>
+  <button mat-raised-button (click)="toggle()">
+    {{this.buttonName}}
+  </button>
+  <ng-container *ngIf="this.show;">
+    <app-deposit-history></app-deposit-history>
+  </ng-container>
 </mat-card>

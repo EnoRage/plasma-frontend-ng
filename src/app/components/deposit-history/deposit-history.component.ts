@@ -1,30 +1,27 @@
 import {Component, OnInit} from '@angular/core';
 import {History} from '../../models/history';
-import {MatTableDataSource} from '@angular/material';
+import {HistoryService} from '../../services';
 import {timer} from 'rxjs';
 import {take} from 'rxjs/operators';
-import {HistoryService} from '../../services';
-
 
 @Component({
-  selector: 'app-transfer-history',
-  templateUrl: './transfer-history.component.html',
-  styleUrls: ['./transfer-history.component.css']
+  selector: 'app-deposit-history',
+  templateUrl: './deposit-history.component.html',
+  styleUrls: ['./deposit-history.component.css']
 })
-
-export class TransferHistoryComponent implements OnInit {
-  displayedColumns: string[] = ['sum', 'who', 'date'];
+export class DepositHistoryComponent implements OnInit {
+  displayedColumns: string[] = ['sum', 'date'];
   dataSource;
 
   constructor(private hist: HistoryService) {
-    this.dataSource = this.getSpecificInfo('Transfer');
+    this.dataSource = this.getSpecificInfo('Deposit');
   }
 
 
   ngOnInit() {
     timer(2000, 2000).pipe(
       take(2000)).subscribe(x => {
-      this.dataSource = this.getSpecificInfo('Transfer');
+      this.dataSource = this.getSpecificInfo('Deposit');
     });
   }
 
@@ -48,4 +45,5 @@ export class TransferHistoryComponent implements OnInit {
     const min: number = new Date(timestamp).getMinutes();
     return month + '/' + date + '/' + year + ' ' + hour + ':' + min;
   }
+
 }
